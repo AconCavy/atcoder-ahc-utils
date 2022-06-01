@@ -27,7 +27,7 @@ if ((Test-Path -Path $OutDir) -ne $true) {
 
 Push-Location $ToolDir
 
-Start-Process -FilePath $Target -RedirectStandardInput $InFile -RedirectStandardOutput $OutFile -Wait -NoNewWindow 
+Start-Process -FilePath $Target -RedirectStandardInput $InFile -RedirectStandardOutput $OutFile -Wait -NoNewWindow
 
 $Tool = Join-Path -Path $ToolDir -ChildPath "target/release/vis.exe" -Resolve
 if ((Test-Path -Path $Tool) -ne $true) {
