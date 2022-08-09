@@ -12,13 +12,15 @@ param (
     $Num = 50,
 
     [int]
-    $ThrottleLimit = 5
+    $ThrottleLimit = 5,
+
+    [int]
+    $MaxScore = 1000000
 )
 
 $Script = Join-Path -Path $PWD -ChildPath "calc-score.ps1"
 $Target = Resolve-Path $Target
 $ToolDir = Resolve-Path $ToolDir
-$MaxScore = 1000000
 
 function Get-Stats {
     0..($Num - 1)
